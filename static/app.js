@@ -168,7 +168,7 @@ async function fetchSteps() {
   status.innerText = 'Computing...';
   const payload = { grid, start, goal, algorithm: algorithmSelect.value };
   try {
-    const res = await fetch('http://127.0.0.1:5000/solve', {
+    const res = await fetch('https://pathfinder-visualizer-production.up.railway.app/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
