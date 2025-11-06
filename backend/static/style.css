@@ -1,0 +1,185 @@
+/* Import a modern sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #e0e0e7; /* soft off-white */
+  color: #333333;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  max-width: 800px;
+  width: 95%;
+  padding: 2rem;
+  background: #f4f4f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* soft shadow */
+}
+
+/* Header */
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #23205c;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Dropdowns and sliders */
+select,
+input[type='range'] {
+  background-color: #e8e8ed; /* soft gray */
+  color: #222222;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+}
+
+select:focus,
+input[type='range']:focus {
+  outline: 2px solid #23205c;
+}
+
+/* Algorithm info box */
+.algorithm-info {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #f0f0f5;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #333333;
+  min-height: 50px;
+  text-align: left;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  border: none;
+  background-color: #d9d9e0;
+  color: #222222;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background-color: #cfcfd8;
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background-color: #23205c; /* soft dark blue */
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background-color: #1b1847;
+}
+
+.btn.accent {
+  background-color: #23205c; /* warm orange */
+  color: #ffffff;
+}
+
+.btn.accent:hover {
+  background-color: #1b1847;
+}
+
+/* Canvas */
+#grid {
+  border-radius: 12px;
+  background-color: #f9f9fb; /* soft cream */
+  display: block;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d0d0d5;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Status text */
+.status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555555;
+  min-height: 20px;
+}
+
+/* Legend under the canvas */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  #grid {
+    width: 90%;
+    height: auto;
+  }
+}

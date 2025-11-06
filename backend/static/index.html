@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathfinding Visualizer</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pathfinding Visualizer</h1>
+
+    <div class="controls">
+      <div class="row">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+          <option value="bfs">Breadth-First Search (BFS)</option>
+          <option value="dfs">Depth-First Search (DFS)</option>
+          <option value="dijkstra">Dijkstra's Algorithm</option>
+          <option value="astar">A*</option>
+          <option value="greedy">Greedy Best-First Search</option>
+        </select>
+      </div>
+
+      <div id="algorithmInfo" class="algorithm-info"></div>
+
+      <div class="row">
+        <label for="speed">Speed: <span id="speedValue">50</span></label>
+        <input type="range" id="speed" min="1" max="100" value="50" />
+      </div>
+
+      <div class="buttons">
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="stepBtn" class="btn">Step</button>
+        <button id="resetBtn" class="btn">Reset</button>
+        <button id="randomWallsBtn" class="btn accent">Random Walls</button>
+      </div>
+    </div>
+
+    <canvas id="grid"></canvas>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #92e75d;"></div> Frontier
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #4ea04f;"></div> Visited
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #9b59b6;"></div> Path
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #3a92df;"></div> Start
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #e9a32b;"></div> Goal
+      </div>
+    </div>
+
+
+    <div id="status" class="status">Ready.</div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>
